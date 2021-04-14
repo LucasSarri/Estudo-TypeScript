@@ -1,0 +1,15 @@
+.formulario_Login
+{
+    display: flex;
+    background-color: red;
+}
+
+.email_Login
+{
+    width: 100%;
+}
+
+.senha_Login
+{
+    width: 100%;
+}
