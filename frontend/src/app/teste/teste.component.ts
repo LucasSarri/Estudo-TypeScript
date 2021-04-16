@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, AtivatedRoute, ParamMap, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-teste',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./teste.component.scss']
 })
 export class TesteComponent implements OnInit {
+  name: any;
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+  ) { }
 
   ngOnInit(): void {
+    this.route.queryParams.subscribe(params => {
+      this.name = params['name'];
+    });
   }
 
 }
